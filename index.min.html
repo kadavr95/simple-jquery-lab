@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="./stylesheet.css">
+<script src="./javascript.js" async></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#161616">
+<meta name="apple-mobile-web-app-title" content="Dimini Inc.">
+<meta name="application-name" content="Dimini Inc.">
+<meta name="msapplication-TileColor" content="#161616">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="initial-scale=1" id="viewport">
+<title>Lab 3 - Dimini Inc.</title>
+<meta name="description" content="Lab 3">
+<link rel="canonical" href="http://dimini.tk/test/Lab-3">
+<link rel="alternate" hreflang="en" href="http://dimini.tk/test/Lab-3">
+<link rel="alternate" hreflang="ru" href="http://dimini.tk/test/Lab-3">
+<meta property="og:title" content="Lab 3 - Dimini Inc.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://dimini.tk/test/Lab3">
+<meta property="og:image" content="http://dimini.tk/site-logo.png">
+<meta property="og:description" content="Lab 3">
+</head>
+<body>
+<?php include("/home/dimini/public_html/global/tagmanager.php"); ?>
+<div id="lab-3-site">
+<div id="centered-container">
+<div id="button-container">
+<button type="button" id="popup-button" onclick="return openModal(),!1">ОТКРЫТЬ МОДАЛЬНОЕ ОКНО</button>
+</div>
+</div>
+</div>
+<div id="modal-div" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
+<div id="modal-message">
+<h3>Расчёт стоимости потолка и окон</h3>
+<form>
+<div>
+<label for="square">Площадь помещения:</label>
+<input name="square" placeholder="Введите площадь помещения" class="form-field" id="square">
+</div>
+<div>
+<label for="windows">Количество окон:</label>
+<input name="windows" placeholder="Введите количество окон" class="form-field" id="windows">
+</div>
+<div>
+<label for="profile">Тип профиля:</label>
+<select name="profile" class="form-field" id="profile">
+<option selected disabled hidden>Выберите тип профиля</option>
+<option value="0.0">Офис Dimini</option>
+<option value="0.1">Бытовка</option>
+<option value="0.3">Сарай без удобств</option>
+<option value="0.5">Аварийное жильё</option>
+<option value="0.8">"Муравейник" за МКАД</option>
+<option value="1.0">"Муравейник" в спальном районе</option>
+<option value="1.3">"Муравейник" в центре</option>
+<option value="1.5">Жилой комплекс за МКАД</option>
+<option value="1.8">Жилой комплекс в спальном районе</option>
+<option value="2.0">Жилой комплекс в центре</option>
+<option value="2.8">Элитная недвижимость за МКАД</option>
+<option value="3.5">Элитная недвижимость в спальном районе</option>
+<option value="5.0">Элитная недвижимость в центре</option>
+<option value="10.0">Личный особняк</option>
+</select>
+</div>
+<div>
+<label for="garbage">Вывоз мусоpa:</label>
+<input type="checkbox" name="garbage" class="form-field" id="garbage"> Требуется вывоз мусора
+</div>
+</form>
+<p>Итого: <span id="final-result">0 руб.</span></p>
+</div>
+</div>
+</div>
+</body>
+</html>
